@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "274394776071",
+    "firebase_url": "https://citypop-76fa9.firebaseio.com",
+    "project_id": "citypop-76fa9",
+    "storage_bucket": "citypop-76fa9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274394776071:android:279a3e6a140254d0",
+        "android_client_info": {
+          "package_name": "com.citypop.hit.citypop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274394776071-8oiv404s56q1gthtlul4qehqjo04m09k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcXmsz7nHeQUB7CttQxyr8j3oHecy09No"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

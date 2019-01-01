@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainBackgroundColor"
+    tools:context=".LoginScreen"
+    android:layoutDirection="ltr"
+    android:id="@+id/parentLayout">
+
+
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/My_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        tools:context=".MapsActivity" />
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/MainBackgroundColor"
+        android:padding="10dp">
+
+
+
+        <Button
+            android:id="@+id/loginSystem_btn"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/Buttons_color"
+            android:text="התחבר למערכת"
+            android:textColor="@color/TextColor"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/connected_btn"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/Connected_color"
+            android:text="מחובר"
+            android:textColor="@color/TextColor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/Gps_location_title_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="15dp"
+            android:background="@color/Buttons_color"
+            android:text="המיקום שזוהה באחריות עיריית:  "
+            android:textColor="@color/TextColor"
+            android:textDirection="rtl" />
+
+        <TextView
+            android:id="@+id/Gps_location_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Gps_location_title_TV"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="18dp"
+            android:background="@color/Buttons_color"
+            android:text="מאתר מיקום...."
+            android:textColor="@color/TextColorError"
+            android:textDirection="rtl" />
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/MainBackgroundColor"
+        android:orientation="horizontal"
+        android:id="@+id/mainToolbar_bottom"
+
+        >
+
+        <Button
+
+            android:id="@+id/MapMoveLocationBtn"
+            android:padding="3dp"
+            android:layout_margin="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="מירכוז מפה"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:textColor="@color/TextColor"
+            android:background="@color/Buttons_color"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:src="@drawable/citypop_logo" />
+
+        <Button
+            android:id="@+id/ActionsBtn"
+            android:padding="3dp"
+            android:layout_margin="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="פעולות"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:textColor="@color/TextColor"
+            android:background="@color/Buttons_color"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/menu_Actions_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mainToolbar_bottom"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <Button
+            android:id="@+id/open_system_malfunction_btn"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@color/Buttons_color"
+            android:padding="3dp"
+            android:text="פתח תקלה בעיר"
+            android:textColor="@color/TextColor"
+            android:textSize="14sp"
+            />
+
+        <Button
+            android:id="@+id/show_inspectors_onMap_btn"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@color/Buttons_color"
+            android:padding="3dp"
+            android:text="הצג מיקום פקחים"
+            android:textColor="@color/TextColor"
+            android:textSize="14sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/show_block_roads_onMap_btn"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@color/Buttons_color"
+            android:padding="3dp"
+            android:text="הצג כבישים חסומים"
+            android:textColor="@color/TextColor"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/show_Town_updates_btn"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@color/Buttons_color"
+            android:padding="3dp"
+            android:text="עדכונים בעיר"
+            android:textColor="@color/TextColor"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/MainBackgroundColor"
+        android:id="@+id/LoginLayout"
+        android:padding="15dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="התחבר למשתמש"
+            android:textColor="@color/TextColor"
+            android:textSize="30sp" />
+
+        <Button
+
+            android:id="@+id/close_login_screen_btn"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="31dp"
+            android:background="@color/Buttons_color"
+            android:text="חזור"
+            android:textColor="@color/TextColor"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/title"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="-180dp"
+            android:orientation="vertical">
+
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:textColorHint="@color/TextColor"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="109dp">
+
+                <EditText
+                    android:id="@+id/Et_email_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="מייל"
+                    android:padding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:shadowColor="@color/TextColor"
+                    android:textColor="@color/TextColor"
+                    android:textColorHighlight="@color/TextColor"
+                    android:textColorHint="@color/TextColor"
+                    android:textColorLink="@color/TextColor"
+                    android:textDirection="ltr" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:textColorHint="@color/TextColor"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="109dp">
+
+                <EditText
+                    android:id="@+id/Et_password_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="סיסמא"
+                    android:padding="10dp"
+                    android:inputType="textPassword"
+                    android:shadowColor="@color/TextColor"
+                    android:textColor="@color/TextColor"
+                    android:textColorHighlight="@color/TextColor"
+                    android:textColorHint="@color/TextColor"
+                    android:textColorLink="@color/TextColor"
+                    android:textDirection="ltr" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/login_intent_SubmitLogin_btn"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="201dp"
+            android:background="@color/Buttons_color"
+            android:text="התחבר"
+            android:textColor="@color/TextColor"
+            android:textSize="15sp" />
+
+
+
+        <Button
+            android:id="@+id/login_intent_CreateUser_btn"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="82dp"
+            android:background="@color/Buttons_color"
+            android:text="צור משתמש"
+            android:textColor="@color/TextColor"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/MainBackgroundColor"
+        android:id="@+id/NoteLayout"
+        android:padding="15dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+
+        <Button
+
+            android:id="@+id/close_NoteForm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="31dp"
+            android:background="@color/Buttons_color"
+            android:text="בטל תקלה"
+            android:textColor="@color/TextColor"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/titleOpenNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="טופס פתיחת תקלה"
+            android:textColor="@color/TextColor"
+            android:textSize="30sp" />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/formNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/Buttons_color"
+            android:layout_marginTop="25dp"
+            android:padding="5dp">
+
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:textColorHint="@color/TextColor"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="109dp">
+
+                <EditText
+                    android:id="@+id/Et_subject_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="נושא תקלה"
+                    android:padding="10dp"
+                    android:shadowColor="@color/TextColor"
+                    android:textColor="@color/TextColor"
+                    android:textColorHighlight="@color/TextColor"
+                    android:textColorHint="@color/TextColor"
+                    android:textColorLink="@color/TextColor"
+                    android:textDirection="rtl" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:textColorHint="@color/TextColor"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="109dp">
+
+                <EditText
+                    android:id="@+id/Et_information_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="הסבר תקלה"
+                    android:padding="10dp"
+                    android:shadowColor="@color/TextColor"
+                    android:textColor="@color/TextColor"
+                    android:textColorHighlight="@color/TextColor"
+                    android:textColorHint="@color/TextColor"
+                    android:textColorLink="@color/TextColor"
+                    android:textDirection="rtl" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/addressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="כתובת"
+                android:textColor="@color/TextColor"
+                android:textSize="20sp"
+                android:textDirection="rtl"
+                />
+
+            <TextView
+                android:id="@+id/timeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="שעה"
+                android:textColor="@color/TextColor"
+                android:textSize="20sp"
+                android:textDirection="rtl"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/HavePictureTV"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Connected_color"
+            android:text="תמונה התקבלה בהצלחה"
+            android:gravity="center"
+            android:textColor="@color/TextColor"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/NotePicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            />
+
+
+        <Button
+            android:id="@+id/takePictureNodeBtn"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Buttons_color"
+            android:text="צלם תקלה בתמונה"
+            android:textColor="@color/TextColor"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/submitNoteToServer"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/formNote"
+            android:background="@color/Buttons_color"
+            android:text="אישור והעברה להמשך טיפול"
+            android:textColor="@color/TextColor"
+            android:textSize="20sp" />
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

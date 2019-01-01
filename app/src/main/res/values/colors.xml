@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="MainBackgroundColor">#390156</color>
+    <color name="TextColor">#ffff</color>
+    <color name="TextColorError">#ff6b6b</color>
+    <color name="cityPopRed">#eb152b</color>
+    <color name="Buttons_color">#2A0040</color>
+    <color name="Connected_color">#01a42f</color>
+
+
+
+    <color name="UText3_color">#1a0241</color>
+    <color name="Updates2_color">#500440</color>
+    <color name="Updates1_color">#960E1C</color>
+    <color name="Updates4_color">#590719</color>
+
+
+
+
+
+
+</resources>
